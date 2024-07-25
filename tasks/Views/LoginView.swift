@@ -9,7 +9,30 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            //Header
+            ZStack {
+                Image("karateMaster")
+                    .resizable()
+                    .frame(width:150, height:150)
+                
+                VStack {
+                    Text("Task Master")
+                        .font(.system(size: 50))
+                        .foregroundColor(Color.black)
+                        .baselineOffset(200)
+                }
+                
+            }
+            .frame(width: UIScreen.main.bounds.width * 3, height:300)
+        }
+        
+        Spacer()
+           
+        //Login
+    
+        
+        //Create Account
     }
 }
 
