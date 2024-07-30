@@ -17,18 +17,22 @@ struct ToDoListItemsView: View {
     }
     
     var body: some View {
+        
         NavigationView {
             VStack {
-                
+                HeaderView2(title: "ToDo List")
+                    .offset(y: -340)
             }
-            .navigationTitle("To Do List")
             .toolbar {
                 Button {
                     //Action
-                    ToDoListSingleItemView()
+                    viewModel.showingNewItemView = true
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+            .sheet(isPresented: $viewModel.showingNewItemView) {
+                NewItemView(newItemPresented: $viewModel.showingNewItemView)
             }
         }
     }
