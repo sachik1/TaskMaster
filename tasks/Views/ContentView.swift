@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel = ContentViewViewModel()
+    
+    
     var body: some View {
-        LoginView()
-        .padding()
+        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
+            accountView
+        }
+        else {
+            LoginView()
+        }
+    }
+    
+    @ViewBuilder
+    var accountView: some View {
+        TabView {
+            ToDoListItemsView(userId: viewModel.currentUserId)
+                .tabItem {
+                    Label("Home", systemImage: "house")
+                }
+            
+            ProfileView()
+                .tabItem {
+                    Label("Profile", systemImage: "person.circle")
+                }
+        }
     }
 }
 

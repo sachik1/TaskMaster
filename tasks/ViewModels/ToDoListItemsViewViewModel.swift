@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+
+//View Model for List of Items View
+//Primary Tab
+class ToDoListItemsViewViewModel: ObservableObject {
+    init() {}
+}
