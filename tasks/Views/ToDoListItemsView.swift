@@ -25,6 +25,7 @@ struct ToDoListItemsView: View {
             .toolbar {
                 Button {
                     //Action
+                    ToDoListSingleItemView()
                 } label: {
                     Image(systemName: "plus")
                 }
