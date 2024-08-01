@@ -23,7 +23,7 @@ struct HeaderView: View {
                     .resizable()
                     .frame(width:120, height:120)
             }
-            .padding(.top, 90)
+            .padding(.top, 110)
             
         }
         .frame(width: UIScreen.main.bounds.width * 3, height:300)

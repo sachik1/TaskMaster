@@ -12,34 +12,38 @@ struct NewItemView: View {
     @Binding var newItemPresented: Bool
     
     var body: some View {
-        VStack {
-            HeaderView2(title: "New Item")
-            
-            Form {
-                //Title
-                TextField("Title", text: $viewModel.title)
-                    .textFieldStyle(DefaultTextFieldStyle())
-                
-                //Due Date
-                DatePicker("Due Date", selection: $viewModel.dueDate)
-                    .datePickerStyle(GraphicalDatePickerStyle())
-                
-                //Button
-                tLButton(title: "Save", background: .blue) {
-                    if viewModel.canSave {
-                        viewModel.save()
-                        newItemPresented = false
-                    } else {
-                        viewModel.showAlert = true
-                    }
+        NavigationView {
+            VStack {
+                Form {
+                    //Title
+                    TextField("Title", text: $viewModel.title)
+                        .textFieldStyle(DefaultTextFieldStyle())
                     
+                    //Due Date
+                    DatePicker("Due Date", selection: $viewModel.dueDate)
+                        .datePickerStyle(GraphicalDatePickerStyle())
+                    
+                    //Button
+                    tLButton(title: "Save", background: .blue) {
+                        if viewModel.canSave {
+                            viewModel.save()
+                            newItemPresented = false
+                        } else {
+                            viewModel.showAlert = true
+                        }
+                        
+                    }
+                    .padding()
                 }
-                .padding()
+                .padding(.top, 30)
+                .navigationTitle("New Item")
+                .toolbarBackground(.red, for: .navigationBar)
+                .toolbarBackground(.visible, for: .navigationBar)
+                .alert(isPresented: $viewModel.showAlert) {
+                    Alert(title: Text("Error"), message: Text("Please fill in all fields and select due date that is today or newer."))
+                }
+                
             }
-            .alert(isPresented: $viewModel.showAlert) {
-                Alert(title: Text("Error"), message: Text("Please fill in all fields and select due date that is today or newer."))
-            }
-            
         }
     }
 }

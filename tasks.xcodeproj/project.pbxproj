@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D297EB42C548D7D00E4ADFC /* HeaderView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D297EB32C548D7D00E4ADFC /* HeaderView2.swift */; };
 		0D297EB62C56BF9100E4ADFC /* tLButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D297EB52C56BF9100E4ADFC /* tLButton.swift */; };
 		0D297EB82C5732EF00E4ADFC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D297EB72C5732EF00E4ADFC /* Extensions.swift */; };
 		0D491EF22C50A95D00BC7667 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0D491EF12C50A95D00BC7667 /* FirebaseAuth */; };
@@ -57,7 +56,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D297EB32C548D7D00E4ADFC /* HeaderView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView2.swift; sourceTree = "<group>"; };
 		0D297EB52C56BF9100E4ADFC /* tLButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tLButton.swift; sourceTree = "<group>"; };
 		0D297EB72C5732EF00E4ADFC /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0D491EFC2C50AC4200BC7667 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -123,12 +121,11 @@
 				0D59E4972C4DB5FB00BFD2DE /* ContentView.swift */,
 				0D491EFE2C50B9D300BC7667 /* ProfileView.swift */,
 				0D491F002C50B9EE00BC7667 /* ToDoListItemsView.swift */,
+				0D491F082C50BB8D00BC7667 /* ToDoListSingleItemView.swift */,
 				0D491F022C50BA0800BC7667 /* NewItemView.swift */,
 				0D491F042C50BA1B00BC7667 /* LoginView.swift */,
 				0D491F062C50BA4200BC7667 /* RegisterView.swift */,
-				0D491F082C50BB8D00BC7667 /* ToDoListSingleItemView.swift */,
 				0D5156CB2C52B8B100C61263 /* HeaderView.swift */,
-				0D297EB32C548D7D00E4ADFC /* HeaderView2.swift */,
 				0D297EB52C56BF9100E4ADFC /* tLButton.swift */,
 			);
 			path = Views;
@@ -370,7 +367,6 @@
 				0D491F0F2C50BBDF00BC7667 /* ContentViewViewModel.swift in Sources */,
 				0D491F072C50BA4200BC7667 /* RegisterView.swift in Sources */,
 				0D59E4982C4DB5FB00BFD2DE /* ContentView.swift in Sources */,
-				0D297EB42C548D7D00E4ADFC /* HeaderView2.swift in Sources */,
 				0D491F192C50BC4500BC7667 /* RegisterViewViewModel.swift in Sources */,
 				0D491F012C50B9EE00BC7667 /* ToDoListItemsView.swift in Sources */,
 				0D297EB62C56BF9100E4ADFC /* tLButton.swift in Sources */,

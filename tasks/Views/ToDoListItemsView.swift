@@ -5,30 +5,46 @@
 //  Created by Sachi Kelkar on 7/23/24.
 //
 
+import FirebaseFirestoreSwift
 import SwiftUI
 
 struct ToDoListItemsView: View {
-    @StateObject var viewModel = ToDoListItemsViewViewModel()
-    
-    private let userId: String
+    @StateObject var viewModel:  ToDoListItemsViewViewModel
+    @FirestoreQuery var items: [ToDoListItem]
     
     init(userId: String) {
-        self.userId = userId
+        
+        self._items = FirestoreQuery(collectionPath: "users/\(userId)/toDos")
+        
+        self._viewModel = StateObject(wrappedValue: ToDoListItemsViewViewModel(userId: userId))
     }
     
     var body: some View {
-        
         NavigationView {
             VStack {
-                HeaderView2(title: "ToDo List")
-                    .offset(y: -340)
+                List(items) {item in
+                    ToDoListSingleItemView(item: item)
+                        .swipeActions {
+                            Button ("Delete") {
+                                viewModel.delete(id: item.id)
+                            }
+                            .tint(.red)
+                        }
+                }
+                .listStyle(PlainListStyle())
             }
+            .navigationTitle("To Do List")
+            .toolbarBackground(.red, for: .navigationBar)
+            .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
-                Button {
-                    //Action
-                    viewModel.showingNewItemView = true
-                } label: {
-                    Image(systemName: "plus")
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        viewModel.showingNewItemView = true
+                            }) {
+                                Image(systemName: "plus")
+                                    .font(.system(size: 25))
+                                    .foregroundColor(.white)
+                    }
                 }
             }
             .sheet(isPresented: $viewModel.showingNewItemView) {
@@ -39,5 +55,5 @@ struct ToDoListItemsView: View {
 }
 
 #Preview {
-    ToDoListItemsView(userId: "")
+    ToDoListItemsView(userId: "p8yLnJywakXGQ9jnYigumk7Owbp1")
 }
