@@ -36,6 +36,7 @@
 		0D59E4A72C4DB5FD00BFD2DE /* tasksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59E4A62C4DB5FD00BFD2DE /* tasksTests.swift */; };
 		0D59E4B12C4DB5FD00BFD2DE /* tasksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59E4B02C4DB5FD00BFD2DE /* tasksUITests.swift */; };
 		0D59E4B32C4DB5FD00BFD2DE /* tasksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D59E4B22C4DB5FD00BFD2DE /* tasksUITestsLaunchTests.swift */; };
+		0DA230562C5C2FC40097F015 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA230552C5C2FC40097F015 /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		0D59E4AC2C4DB5FD00BFD2DE /* tasksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tasksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D59E4B02C4DB5FD00BFD2DE /* tasksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tasksUITests.swift; sourceTree = "<group>"; };
 		0D59E4B22C4DB5FD00BFD2DE /* tasksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tasksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0DA230552C5C2FC40097F015 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				0D59E4952C4DB5FB00BFD2DE /* tasksApp.swift */,
 				0D491EFC2C50AC4200BC7667 /* GoogleService-Info.plist */,
 				0D297EB72C5732EF00E4ADFC /* Extensions.swift */,
+				0DA230552C5C2FC40097F015 /* Launch Screen.storyboard */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			files = (
 				0D59E49D2C4DB5FD00BFD2DE /* Preview Assets.xcassets in Resources */,
 				0D59E49A2C4DB5FD00BFD2DE /* Assets.xcassets in Resources */,
+				0DA230562C5C2FC40097F015 /* Launch Screen.storyboard in Resources */,
 				0D491EFD2C50AC4200BC7667 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
